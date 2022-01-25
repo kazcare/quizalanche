@@ -24,7 +24,7 @@ function loadQuestion(questionIndex) {
     opt4.textContent = q.option4;
 }
 
-nextButton.addEventListener('click', loadQuestion);
+nextButton.addEventListener('click', loadNextQuestion);
 
 //Function for Next Question nextButton
 function loadNextQuestion() {
@@ -38,14 +38,42 @@ function loadNextQuestion() {
 //Checks selected option against the correct answer
     checkAnswer()
 
-//If the content question is the last question then Next Question Button willbe changes to finish
-    if (currentQuestion ==totalQuestions - 1) {
+//If the current question is the last question then Next Question Button changes to Finish Button
+    if (currentQuestion == totalQuestions - 1) {
         nextButton.textContent = 'Finish';
     }
 
-
-
+//After finish the last question the Quiz container will disappear
+//and Result container displays and shows the score
+    if(currentQuestion == totalQuestions) {
+        container.style.display = 'none';
+        resultCont.style.display = '';
+//Result container shows the achieved score / maximum possible score
+        resultCont.textContent = 'You Score: '+score+' / '+totalQuestions;
+        return;
+    }
+//If current question is not the last question, the next question is displayed
 loadQuestion(currentQuestion);
+
+}
+
+//Function to check the answer
+function checkAnswer() {
+
+//When the Next Question Button is clicked after selecting an option
+//The option is checked against the correct answer fron question.js
+//If the selected answer is correct the score is increased
+    let selectedOption = document.querySelector('input[type=radio]:checked');
+    let answer = selectedOption.value;
+    if(questions[currentQuestion].answer === answer) {
+        score += 1;
+    }
+
+//The selected radio button is unchecked
+    selectedOption.checked = false;
+
+//Increment current question
+    currentQuestion++;
 
 }
 
