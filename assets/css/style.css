@@ -129,10 +129,10 @@ span {
         width: 200px;
     }
     .question, .option {
-        width: 150px;
+        width: 175px;
         font-size: 1.2rem;
     }
     .result {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
