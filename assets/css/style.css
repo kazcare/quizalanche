@@ -84,7 +84,10 @@ span {
     .container {
         width: 600px;
     }
-    .question, .option {
+    .question {
+        width: 530px;
+    }
+    .option {
         width: 550px;
     }
     .result {
@@ -97,7 +100,10 @@ span {
     .container {
         width: 500px;
     }
-    .question, .option {
+    .question {
+        width: 430px;
+    }
+    .option {
         width: 450px;
     }
     .result {
@@ -111,7 +117,7 @@ span {
         width: 350px;
     }
     .question {
-        width: 300px;
+        width: 280px;
         font-size: 1.3rem;
     }
     .option {
@@ -129,7 +135,11 @@ span {
    .container {
         width: 200px;
     }
-    .question, .option {
+    .question {
+        width: 160px;
+        font-size: 1.2rem;
+    }
+    .option {
         width: 175px;
         font-size: 1.2rem;
     }
