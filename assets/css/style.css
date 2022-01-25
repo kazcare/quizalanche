@@ -30,6 +30,7 @@ h1 {
     box-shadow: 0 0 8px 3px #fff;
 }
 .question {
+    height: fit-content;
     width: 850px;
     padding: 20px;
     font-size: 22px;
@@ -39,6 +40,7 @@ h1 {
     color: #f6f6f6;
 }
 .option  {
+    height: fit-content;
     width: 420px;
     display: inline-block;
     padding: 10px 0 10px 15px;
@@ -74,5 +76,64 @@ span {
     height: fit-content;
     text-align: center;
     font-size: 75px;
+    color: #000;
 }
 
+@media screen and (max-width: 1050px) {
+
+    .container {
+        width: 600px;
+    }
+    .question, .option {
+        width: 550px;
+    }
+    .result {
+        font-size: 65px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    
+    .container {
+        width: 500px;
+    }
+    .question, .option {
+        width: 450px;
+    }
+    .result {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+    .container {
+        width: 350px;
+    }
+    .question {
+        width: 300px;
+        font-size: 1.3rem;
+    }
+    .option {
+        width: 300px;
+    }
+    .result {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+   .container {
+        width: 200px;
+    }
+    .question, .option {
+        width: 175px;
+        font-size: 1.2rem;
+    }
+    .result {
+        font-size: 30px;
+    }
+}

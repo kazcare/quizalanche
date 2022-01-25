@@ -4,9 +4,9 @@
 # **Quiz-a-lanche**
 ## Overview
 
-This is a quiz game, which gives users 15 questions to answer and scores when users answer those questions.
+This is a quiz game, which currently have 15 questions to answer and scores when users answer those questions.
 
-(WIREFRAMES)
+<img src="docs/wireframe.png">
 
 **GitHub repository** can be found by clicking <a href="https://github.com/kazcare/quizalanche" target="_blank" rel="noopener">**here**.</a> and the deployed **live link** for the website can be found by clicking <a href="https://kazcare.github.io/quizalanche/index.html" target="_blank" rel="noopener">**here**.</a>    
 
