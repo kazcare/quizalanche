@@ -81,6 +81,11 @@ function checkAnswer() {
     let answer = selectedOption.value;
     if(questions[currentQuestion].answer == answer) {
         score += 1;
+// and Quiz container background color changes to green
+    container.style.backgroundColor = "#79d279";
+}  else {
+//If the selected option is wrong the Quiz container changes to red
+    container.style.backgroundColor = "#ff6666";
     }
 
 //The selected radio button is unchecked
