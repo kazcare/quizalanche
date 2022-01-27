@@ -69,131 +69,68 @@ This is a quiz game, which currently have 15 questions to answer and scores when
 <a></a>
 ### Fonts
 (To be added)
-I have used Google fonts to find the desired font styles for this project and have decided to use font **'Lato' and 'Oswald'**. These two font styles complement each other very well.
+I have used Google fonts to find the desired font styles for this project and have decided to use font **'Italianno' and 'Raleway'**. These are the kind of fonts I wanted to add to this particular project.
 
-* I used Oswald font style for the headings. Oswald makes the headings clear and nice to look at. 
+* I used Italianno font style for the heading. Italianno give it a funky touch. 
 
-* For the body content and recipes and forms, I used Lato font. It make the website very easy to read.
+* For the rest body area I used Raleway font. It makes the app very easy to read.
 
 <a></a>
 ### Icons
 
-I have used all the icons in the footer from the **[Font Awesome library](https://fontawesome.com/ "Font Awesome")**.
+I have used one icon for the window title, which I googled and downloaded and then got it converted as icon file from the **[Favicon website](https://favicon.io/ "Favicon website")**.
 
 <a></a>
 ### Colors
 
-I used a colour similar to **navy** *rgb(23, 16, 44)* for the all the texts and heading to give a uniformity throughout the website and used a similar to **light pistachio** *rgb(198, 213, 167)* colour for the background to give a good contrast between the text and the background, which makes it easy to read.
+I picked **light blue** rgba(255, 255, 255, 0.7) for the main quiz container.
+I used a colour similar to **dark gray** *rgba(13, 13, 26, 0.6)* for the heading and question container and container has a white shadow aroud the container. 
+Option containers and the Next Question button has **light gray** rgba(255, 255, 255, 0.5) background color and **black** text color.
 
 [Back to Top](#table-of-contents)
 <a></a>
 ## Features
-### **Header and Navbar**
+### **Header**
 
-* Website has a header element with logo on the left side of the website.
+* It has a funky looking heading with 'Italianno' font.
 
-* There is a nav bar beside logo on the right hand side.
+* There is background image, which complements the quiz app.
 
-* Navigation bar links are increase in size when the particular navbar link is hovered. 
-
-* The navigation link is underlined for the current active page.
-    
-* These properties and **looks of the header and navbar are consistant throughout the website**.
-
-* The logo and nav bar link items have sticky position. These stay on the top of the screen, even when user is scrolling down.
-
-* Nav bar hanging against the logo on the right hand side, but it chages its position for smaller screen it moves under the logo for screen sizes 950px and smaller (for tablets). It reduces its font size for screen sizes 600px and smaller (for smart phones/ tablets in portrait mode).
-
-<img src="docs/nav-bar-hover.png">
-
-[Back to Top](#table-of-contents)
+* Color palette I used is green and blue with mild opacity to make it look more apealing. 
 
 <a></a>
-### **Hero Image**
+### **Quiz Container**
 
- * On home page there is a hero image, which is consistent throughout the website.
+ * Quiz container is always stays in the middle of the screen for all the screen sizes.
 
- * On the Hero image on the right hand side there is a text overlay block showing brief description about what is this website for. 
+ * Quiz containers holds a Question Container, 4 Option Containers  (radio buttons as there is only one possible answer to each question) and a Next Question Button.
 
- * The cover text (text overlay) shift towards the left hand side for the smaller screens.
+ * Question container has a darker background color with light text color.
 
-[Back to Top](#table-of-contents)
+ * While Option Containers and Next Question Button have lighter background color with dark text color. These Option Containers and Next Question Button have Hover feature added to then, so they temporarily change their background color to the same color as Question Container when the mouse pointer hovers over them.
 
-<a></a>
-### **Landing Page**
+ * All responsiveness is controlled by Next Question Button.
 
- * Under the hero image it has some text including some facts about cheese and why people think it is amazing, what actually cheese is and what is the origin of cheese? 
+ * Quiz game loads with the first question preloaded.
 
- * It has a picture on the right hand side of the text, which covers 50% of the screen normally but it take up 100% of the width when screen size is reduced to 600 pixels or less.
+ * If the Next Question Button without making any selection, it pops an alert saying "Please, select and option!"
 
-<img src="docs/responsive-main.png">
+ * When an option is selected and Next Qestion Button is pressed, the selcted option is checked against the correct answer provided in "question.js".
 
-[Back to Top](#table-of-contents)
-<a></a>
-### **Recipe Page**
+ * If the selected option matches the correct answer the background color of the Quiz Container changes to green otherwise it turns red.
 
-There are currently 2 recipe pages available, Mac n Cheese and Cheesy Pizza. These recipe pages have same header and footer layout.
+ <img src="docs/correct.png">
+ <img src="docs/incorrect.png">
 
-* On the recipe pages under the hero image there are two sections, Ingredients and Method.
+ * And next question loads and selected option radion button unchecks again and user can make selction for the next question.
 
-* Igredients are listed as an unordered list.
+ * This process repeats until the last avaiable question displays. As soon as the last question pops on screen the Next Question Button changes it's text and reads Finish.
 
-* In the section with ingredients there is a picture as well, which  covers 50% of the screen width. 
+ * After making the selection for the last question user clicks the Finish button and the Quiz container disappears and result container appears with the achieved score versus maximum achievable score.
 
-* The picture sits besides the ingredient list.
+ <img src="docs/responsive-result.png">
 
-* But this picture takes 100% width for the smaller screens and ingredients shifts under the picture.
-
-* Under ingredients it has a method section showing how to cook the food step by step.
-
-<img src="docs/recipe-page.png">
-
-[Back to Top](#table-of-contents)
-
-<a></a>
-### **Footer**
-
-* Footer contains social media icons which are linked to the corresponding external websites.
-
-* These links open in a new tabs, so the user stays on our website.
-
-* The footer section covers 100% of the screen width on all screen sizes.
-
-* The links centerally alligned.
-
-* **Aria label** attribute is used for all the external links to communicate the text to screen reader users. 
-
-<img src="docs/footer-responsive.png">
-
-[Back to Top](#table-of-contents)
-
-<a></a>
-### **Feedback Page**
-
-Feedback page was designed to get user login and their feedback about the website, get the new ideas from the target audience. There are 4 fields in this form.
-
-1. Email 
-    - Takes user's email address and it is a required field. It validates the entry for the right email syntax and form will not be submitted without having it filled correctly.
-
-2. Username
-    - It takes user's unique ID picked by user and it is a required field and form cannot be submitted without entering a valid data.
-
-3. Password
-    - It can be filled with user's own choice of password. It is a required field as well and form will not be validated without it.
-
-4. Feedback
-    - Last item is a textarea, which is to be filled in with user's suggestions or opinion or anything they have to say regarding the website.
-        
-<img src="docs/feedback.png">
-
-[Back to Top](#table-of-contents)
-<a></a>
-### **Thank You Page**
-
-This page was created to thank users for taking their time to fill up the feedback form and to give them confirmation that their feedback has been validly entered.
-The box height and width gains in size to accomodate the text on the smaller screens.
-
-<img src="docs/thankyou.png">
+ * If the user wants to play quiz again the page can be refreshed to start the quiz again.
 
 [Back to Top](#table-of-contents)
 
@@ -201,8 +138,11 @@ The box height and width gains in size to accomodate the text on the smaller scr
 ## Technologies Used
 ### Languages
 
-As I am doing HTML/CSS project, I used only HTML5 and CSS3 throughout the project.
+I used only HTML5, CSS3 and JavaScript languages throughout the project.
 I used media query to make the website responsive to different screen sizes.
+I added an icon which displays on the browser window beside the title, it look like this
+
+<img src="docs/icon.png">
 
 <a></a>
 ### Tools
@@ -267,21 +207,13 @@ I used Gitpod IDE to code my website.
 
 * Following features were tested for all of the above screen sizes
 
-    - Logo stayed on the top left hand side on  all the pages of the site. Font size reduced for 600px and smaller screen sizes.
+    - Quiz Container and Result Container stay in the middle of the all screen sizes horizontally and vertically.
 
-    - Navbar sat on the right hand side of the logo on all pages. It moved under the logo for screen sizes 950px and smaller. Its font reduced for the screen sizes 600px and smaller.
+    - Quiz Container and the Option containers cover same amount of space horizomtally.
 
-    - Hero image stayed under the Header area covering 100% of the width on all pages.
+    - Next Question button stays at the right hand bottom corner and changes it's text content to Finish as the last question displays on the screen.
 
-    - Cover text stayed on the right hand side on top of the Hero Image but it moved to the left hand side for 950px and smaller screen sizes. It reduced its font for the screen size 600px and smaller.
-
-    - Body area of the home page and the recipe pages covered 100% of the screen including the picture which shared 50% of the width of the top of the body area. Text took over the full width under the image as it was intended. The image took over 100% of the width for 600px and smaller screen sizes.
-
-    - Footer stayed at the bottom of all the pages with social media link, which worked as they intended and opened in the new tab.
-
-    - On the feedback form submit button, it didn't let it submit without entering all the required fields and checked for the valid syntax.
-
-    - When all the required fields on the feedback form were validated, the submit button brought me to the "Thank you" page.
+    - Quiz container changes it's background color as the answer is picked by user, green for selecting the right answer and red if the wrong answer is selected.
 
 <img src="docs/testing-chrome.png">
 <img src="docs/testing-edge.png">

@@ -44,7 +44,7 @@ function loadNextQuestion() {
 //It pops an alert to user asking for a selection before clicking the Next Question Button
     let selecedOption = document.querySelector('input[type=radio]:checked');
     if(!selecedOption) {
-        alert('Please select an option');
+        alert('Please, select an option!');
         return;
     }
 
