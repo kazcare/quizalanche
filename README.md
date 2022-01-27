@@ -228,6 +228,8 @@ I used Gitpod IDE to code my website.
 
 * No issues were indicated by W3C CSS (Jigsaw) validator for css file.
 
+* No error was found by Jshint.
+
 * I confirmed that colours and fonts are readable.
 
 * I used the lighthouse option in the Google Chrome Dev Tools to verify the website integrity. Following is the screenshot of the report. 
@@ -239,9 +241,7 @@ I used Gitpod IDE to code my website.
 <a></a>
 ## Fixed Bugs
 
-* I have a sticky header and navbar, situated side by side on the top of each page of the site. On the smaller screens, navbar moves under the logo, creating another row. For the mobile screens, navbar used to go under logo but the navbar items were stacked on top of each other and it was covering almost half of the screen. I fixed it by reducing the font of the navbar item, so these can fit on one row under the logo.
-
-* The sticky header and navbar had another issue that when I was scrolling down, it was staying on the top of all the items except the hero image. I used z-index on the header area and hero image and gave the one for header area higher value than the one for the hero image to resolve the issue.
+* 
 
 [Back to Top](#table-of-contents)
 
@@ -267,27 +267,18 @@ I deployed my website through <a href="https://github.com/" target="_blank" rel=
 <a></a>  
 ## Credits
 
-I would like to inform you all that this project (Cheesy Cheese) is built for **educational purpose** only and I have rendered the following items and information from different resources. I would like to thank all of these resources for helping me completing my project.
+I would like to inform you all that this project (Quizalanche) is built for **educational purpose** only and I have rendered the following items and information from different resources. I would like to thank all of these resources for helping me completing my project.
 
 <a></a>
 ### Content
 
-All recipes were copied from **"bbcgoodfood.com"**
+All questions were takem from **"radiotimes.com"**
 
 <a></a>
 ### Media
 
-* Image used as hero image is downloaded from **"pixels.com"**
+* Image used as background is downloaded from **"istockphoto.com"**
 
-* Rest of the images on the main page and recipe pages are downloaded from **"istockphoto.com"**
-
-* All Social media icons were downloaded from **"Font Awesome"**
-
-<a></a>
-### Other Sources
-
-* Idea for the feedback form was taken from **"CSS Sign Up Form Tutorial"** from the **"freecodecamp.org"** with some modification.
-
-* Text overlay idea was taken from **"love running"** website.
+* Icon image I used for the browser window, was downloaded from google and converted into icon file using "favicon.com".
 
 [Back to Top](#table-of-contents)
