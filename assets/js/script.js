@@ -1,7 +1,7 @@
 let currentQuestion = 0;
 let score = 0;
 
-// Create variables to all mutable areas
+// Create variables to all mutable areas on html
 let container = document.getElementById('quiz-container');
 let questionEL = document.getElementById('question');
 let opt1 = document.getElementById('opt1');
@@ -17,16 +17,23 @@ let checkText = document.getElementById('check-text');
 //Total number of question available in question.js
 let totalQuestions = questions.length;
 
+//Add an Event Listner on the Next Button, which calls loadNextQuestion function as it is clicked
+nextButton.addEventListener('click', loadNextQuestion);
 
+//Add an Event Listener on the continue button in Check container, which calls contQuiz function as it is clicked
+contButton.addEventListener('click', contQuiz);
+
+//Call loadQuestion function
 loadQuestion(currentQuestion);
 
-//Populate questions through load question
+//Populate questions in the Question and Option containers
 function loadQuestion(questionIndex) {
 
 //Get qestions index from question.js and assign to a variable q
     let q = questions[questionIndex];
 
-//Populate Question Container by assigning text content the questions array from question.js and prefix a question counter
+//Populate Question Container by assigning text content of the questions array from question.js 
+//and prefix a question counter
     questionEL.textContent = (questionIndex + 1) + '. '+q.question;
 
 //Populate 4 option fields with the text content of 4 options from question.js
@@ -36,15 +43,7 @@ function loadQuestion(questionIndex) {
     opt4.textContent = q.option4;
 }
 
-//Add an Event Listner on the Next Button, which calls loadNextQuestion function as it is clicked
-nextButton.addEventListener('click', loadNextQuestion);
-
-
-//Add an Event Listener on the continue button in Check container, which calls contQuiz function as it is clicked
-contButton.addEventListener('click', contQuiz);
-
-//Function for Next Question nextButton
-//It runs when the Next Button is clicked
+//Function for Next Question nextButton, which runs when the Next Button is clicked
 function loadNextQuestion() {
 
 //If Next Question Button is clicked without selecting an option
@@ -55,7 +54,7 @@ function loadNextQuestion() {
         return;
     }
 
-//Checks selected option against the correct answer
+//checkAnswer function is called which checks selected option against the correct answer
     checkAnswer()
 
 //If the current question is the last question then the text of Next Question button changes to Finish button
@@ -84,39 +83,46 @@ function checkAnswer() {
 
 //When the Next Question Button is clicked after selecting an option
 //The option is checked against the correct answer from question.js
-//If the selected answer is correct the score is increased
+
     let selectedOption = document.querySelector('input[type=radio]:checked');
     let answer = selectedOption.value;
     if(questions[currentQuestion].answer == answer) {
 
-
-    // and Quiz container background color changes to green
+//If the selected answer is correct
+//Quiz container disappears
         container.style.display = 'none';
+//Check Container appears
         checkCont.style.display = '';
+//with a message that answere is correct
         document.getElementById('check-text').innerHTML = "You are absolutely right, keep it up!";
+//background color changes
         checkCont.style.backgroundColor = "#79d279";
+//and the score increased
         score += 1;
-}  else {
-//If the selected option is wrong the Quiz container changes to red
+    }  else {
+//If the selected option is wrong
+//Quiz container disappears
         container.style.display = 'none';
+//Check Container appears
         checkCont.style.display = '';
+//with a message that the answer is incorrect
         document.getElementById('check-text').innerHTML = "Answer is incorrect this time, better luck next time!";
-        checkCont.style.backgroundColor = "#ff6666";
-        }
+//Background color changes and score stays as it was
+        checkCont.style.backgroundColor = "#E86468";
+    }
 
 //The selected radio button is unchecked
     selectedOption.checked = false;
 
 //Increment current question
     currentQuestion++;
-
 }
 
-
-//Function to continue the quiz
-
+//Function to continue the quiz after getting message showing whether the answer is correct or not
 function contQuiz() {
+//check container dissappears
     checkCont.style.display = 'none';
+//Quiz container reappears
     container.style.display = '';
 }
 

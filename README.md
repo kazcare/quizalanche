@@ -4,7 +4,9 @@
 # **Quiz-a-lanche**
 ## Overview
 
-This is a science quiz game, which currently have 15 questions to answer and scores when users answer those questions. Questions are related to different fields of science. 
+This is a *science quiz* game, which is very **easy to use**. I does not have too many buttons which makes it easy to use nor even an novice.
+
+It currently has 15 questions to answer . Questions are related to different fields of science. 
 
 The oroginal look was planned according to the following wireframes.
 
@@ -26,7 +28,9 @@ Following is the actual look after deployment.
         * [Icons](#icons)
         * [Colors](#colors)
 * [Features](#features)
-    * [Quiz Container](#quiz-container)
+    * [Current Features](#current-features)
+        * [Quiz Container](#quiz-container)
+    * [Future Heatures](#future-features)
 * [Technologies Used](#technologies-used)
     * [Languages](#languages)
     * [Tools](#tools)
@@ -54,7 +58,8 @@ Following is the actual look after deployment.
 
 * I want to play a game which is visually appealing.
 * I would like to play easy to access quiz game.
-* I should be able to give user feedback about their knowledge.
+* It should not have too many unnecessary buttons.
+* It should be giving user feedback about their knowledge.
 * I would like to see some interesting, informative and challenging questions in the quiz game.
 * It should look professionally designed.
 
@@ -86,7 +91,8 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 [Back to Top](#table-of-contents)
 <a></a>
 ## Features
-### **Quiz Container**
+### **Current Features**
+#### **Quiz Container**
  
  * Heading is including in the actual Quiz container.
 
@@ -108,7 +114,7 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 
  * Quiz game loads with the first question on the screeen.
 
- * If the Next Question Button clicked without making any selection, it pops an alert saying "Please, select and option!"
+ * If the Next Question Button clicked without making any selection, it pops an alert saying "Please, select an option!"
 
  * When an option is selected and Next Qestion Button is pressed, the selcted option is checked against the correct answer provided in "question.js" and Quiz container disappears and a message box appears with either green or red background colour, showing whether user has picked the correct answer or not. Plus it has a Continue button at the bottom right corner to continue to the rest of the quiz.
 
@@ -124,6 +130,12 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
  <img src="docs/responsive-result.png">
 
  * If the user wants to play quiz again the page can be refreshed to start the quiz again.
+
+### **Future Features**
+
+ * In the future it will have different catagories of quiz to attract more users
+
+ * It will have randomly generated questions
 
 [Back to Top](#table-of-contents)
 
