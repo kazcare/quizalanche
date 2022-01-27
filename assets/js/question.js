@@ -1,4 +1,4 @@
-const questions = [
+const QUESTIONS = [
     {
     "question": "What does DNA stand for?",
     "option1": "Ribonucleic Acid",
