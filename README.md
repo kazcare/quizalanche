@@ -4,12 +4,15 @@
 # **Quiz-a-lanche**
 ## Overview
 
-This is a quiz game, which currently have 15 questions to answer and scores when users answer those questions.
+This is a science quiz game, which currently have 15 questions to answer and scores when users answer those questions. Questions are related to different fields of science. 
+
+The oroginal look was planned according to the following wireframes.
 
 <img src="docs/wireframe.png">
 
 **GitHub repository** can be found by clicking <a href="https://github.com/kazcare/quizalanche" target="_blank" rel="noopener">**here**.</a> and the deployed **live link** for the website can be found by clicking <a href="https://kazcare.github.io/quizalanche/index.html" target="_blank" rel="noopener">**here**.</a>    
 
+Following is the actual look after deployment.
 <img src="docs/responsive-main.png">
 
 <a></a>
@@ -23,13 +26,7 @@ This is a quiz game, which currently have 15 questions to answer and scores when
         * [Icons](#icons)
         * [Colors](#colors)
 * [Features](#features)
-    * [Header and Navbar](#header-and-navbar)
-    * [Hero Image](#hero-image)
-    * [Landing Page](#landing-page)
-    * [Recipe Page](#recipe-page)
-    * [Footer](#footer)
-    * [Feedback Page](#feedback-page)
-    * [Thank You Page](#thank-you-page)
+    * [Quiz Container](#quiz-container)
 * [Technologies Used](#technologies-used)
     * [Languages](#languages)
     * [Tools](#tools)
@@ -41,7 +38,6 @@ This is a quiz game, which currently have 15 questions to answer and scores when
 * [Credits](#credits)
     * [Content](#content)
     * [Media](#media)
-    * [Other Sources](#other-sources)
 
 <a></a>
 ## User Goals
@@ -90,16 +86,15 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 [Back to Top](#table-of-contents)
 <a></a>
 ## Features
-### **Header**
-
-* It has a funky looking heading with 'Italianno' font.
-
-* There is background image, which complements the quiz app.
-
-* Color palette I used is green and blue with mild opacity to make it look more apealing. 
-
-<a></a>
 ### **Quiz Container**
+ 
+ * Heading is including in the actual Quiz container.
+
+ * It has a funky looking heading with 'Italianno' font.
+
+ * There is background image, which complements the quiz app.
+ 
+ * Color palette I used is green and blue with mild opacity to make it look more apealing.
 
  * Quiz container is always stays in the middle of the screen for all the screen sizes.
 
@@ -107,22 +102,22 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 
  * Question container has a darker background color with light text color.
 
- * While Option Containers and Next Question Button have lighter background color with dark text color. These Option Containers and Next Question Button have Hover feature added to then, so they temporarily change their background color to the same color as Question Container when the mouse pointer hovers over them.
+ * While Option Containers and Next Question Button have lighter background color with dark text color. These Option Containers and Next Question Button have Hover feature added to them, so they temporarily change their background color to the same color as Question Container when the mouse pointer hovers over them.
 
- * All responsiveness is controlled by Next Question Button.
+ * All responsiveness on the Quiz Container is controlled by Next Question Button.
 
- * Quiz game loads with the first question preloaded.
+ * Quiz game loads with the first question on the screeen.
 
- * If the Next Question Button without making any selection, it pops an alert saying "Please, select and option!"
+ * If the Next Question Button clicked without making any selection, it pops an alert saying "Please, select and option!"
 
  * When an option is selected and Next Qestion Button is pressed, the selcted option is checked against the correct answer provided in "question.js" and Quiz container disappears and a message box appears with either green or red background colour, showing whether user has picked the correct answer or not. Plus it has a Continue button at the bottom right corner to continue to the rest of the quiz.
 
  <img src="docs/correct.png">
  <img src="docs/incorrect.png">
 
- * And next question loads and selected option radion button unchecks again and user can make selction for the next question.
+ * And next question loads and selected option radio button unchecks again and user can make selction for the next question.
 
- * This process repeats until the last avaiable question displays. As soon as the last question pops on screen the Next Question Button changes it's text and reads Finish.
+ * This process repeats until the last avaiable question displays. As soon as the last question pops on screen the Next Question Button changes it's text to **Finish**.
 
  * After making the selection for the last question user clicks the Finish button and the Quiz container disappears and result container appears with the achieved score versus maximum achievable score.
 
@@ -246,7 +241,8 @@ I used Gitpod IDE to code my website.
 ## Fixed Bugs
 
 * Originally the Quiz container was changing the backgoud colour to either green or red to show the user if the selected answer was correct ot not. But it was not changing it back to original state before the next question appears on the screen. 
-    To solve it I created an new container to show the message showing whether the selected answer is correct or not with a Continue button to go back to Quiz. Plus this container shows up either with green or red background color, depending on the selected answer. This container replaces the Quiz Container after user clicks Next Question Button.
+
+* To solve it I created an new container to show the message showing whether the selected answer is correct or not with a Continue button to go back to Quiz. Plus this container shows up either with green or red background color, depending on the selected answer. This container replaces the Quiz Container after user clicks Next Question Button.
 
 [Back to Top](#table-of-contents)
 
