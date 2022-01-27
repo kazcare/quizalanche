@@ -115,9 +115,7 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 
  * If the Next Question Button without making any selection, it pops an alert saying "Please, select and option!"
 
- * When an option is selected and Next Qestion Button is pressed, the selcted option is checked against the correct answer provided in "question.js".
-
- * If the selected option matches the correct answer the background color of the Quiz Container changes to green otherwise it turns red.
+ * When an option is selected and Next Qestion Button is pressed, the selcted option is checked against the correct answer provided in "question.js" and Quiz container disappears and a message box appears with either green or red background colour, showing whether user has picked the correct answer or not. Plus it has a Continue button at the bottom right corner to continue to the rest of the quiz.
 
  <img src="docs/correct.png">
  <img src="docs/incorrect.png">
@@ -211,9 +209,15 @@ I used Gitpod IDE to code my website.
 
     - Quiz Container and the Option containers cover same amount of space horizomtally.
 
-    - Next Question button stays at the right hand bottom corner and changes it's text content to Finish as the last question displays on the screen.
+    - Quiz container disappears as user clicks Next Question button after selectin an answer and a message box appears. 
+    
+    - The message box shows up with either green or red background colour depending the selected answer.
+    
+    - The message box has a Continue button at the bottom right corner to continue to the rest of the quiz.
 
-    - Quiz container changes it's background color as the answer is picked by user, green for selecting the right answer and red if the wrong answer is selected.
+    - Next Question button stays at the right hand bottom corner of the Quiz container and changes it's text content to Finish as the last question displays on the screen.
+
+    - As user clicks the Finish button the Quiz container disappears again and shows up the Result container with the achieved score.
 
 <img src="docs/testing-chrome.png">
 <img src="docs/testing-edge.png">
@@ -241,7 +245,8 @@ I used Gitpod IDE to code my website.
 <a></a>
 ## Fixed Bugs
 
-* 
+* Originally the Quiz container was changing the backgoud colour to either green or red to show the user if the selected answer was correct ot not. But it was not changing it back to original state before the next question appears on the screen. 
+    To solve it I created an new container to show the message showing whether the selected answer is correct or not with a Continue button to go back to Quiz. Plus this container shows up either with green or red background color, depending on the selected answer. This container replaces the Quiz Container after user clicks Next Question Button.
 
 [Back to Top](#table-of-contents)
 
