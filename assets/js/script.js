@@ -8,8 +8,11 @@ let opt1 = document.getElementById('opt1');
 let opt2 = document.getElementById('opt2');
 let opt3 = document.getElementById('opt3');
 let opt4 = document.getElementById('opt4');
-let nextButton = document.getElementById('nextButton');
+let nextButton = document.getElementById('next-button');
+let contButton = document.getElementById('cont-button');
 let resultCont = document.getElementById('result');
+let checkCont = document.getElementById('check');
+let checkText = document.getElementById('check-text');
 
 //Total number of question available in question.js
 let totalQuestions = questions.length;
@@ -36,6 +39,10 @@ function loadQuestion(questionIndex) {
 //Add an Event Listner on the Next Button, which calls loadNextQuestion function as it is clicked
 nextButton.addEventListener('click', loadNextQuestion);
 
+
+//Add an Event Listener on the continue button in Check container, which calls contQuiz function as it is clicked
+contButton.addEventListener('click', contQuiz);
+
 //Function for Next Question nextButton
 //It runs when the Next Button is clicked
 function loadNextQuestion() {
@@ -60,6 +67,7 @@ function loadNextQuestion() {
 //and Result container displays and shows the score
     if(currentQuestion == totalQuestions) {
         container.style.display = 'none';
+        checkCont.style.display = 'none';
         resultCont.style.display = '';
 
 //Result container shows the achieved score / maximum possible score
@@ -80,13 +88,21 @@ function checkAnswer() {
     let selectedOption = document.querySelector('input[type=radio]:checked');
     let answer = selectedOption.value;
     if(questions[currentQuestion].answer == answer) {
+
+
+    // and Quiz container background color changes to green
+        container.style.display = 'none';
+        checkCont.style.display = '';
+        document.getElementById('check-text').innerHTML = "You are absolutely right, keep it up!";
+        checkCont.style.backgroundColor = "#79d279";
         score += 1;
-// and Quiz container background color changes to green
-    container.style.backgroundColor = "#79d279";
 }  else {
 //If the selected option is wrong the Quiz container changes to red
-    container.style.backgroundColor = "#ff6666";
-    }
+        container.style.display = 'none';
+        checkCont.style.display = '';
+        document.getElementById('check-text').innerHTML = "Answer is incorrect this time, better luck next time!";
+        checkCont.style.backgroundColor = "#ff6666";
+        }
 
 //The selected radio button is unchecked
     selectedOption.checked = false;
@@ -96,4 +112,11 @@ function checkAnswer() {
 
 }
 
+
+//Function to continue the quiz
+
+function contQuiz() {
+    checkCont.style.display = 'none';
+    container.style.display = '';
+}
 
