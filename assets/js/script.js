@@ -59,10 +59,11 @@ function loadNextQuestion() {
         warning.style.display = '';
         return;
     } else {
+        let warning = document.getElementById('warning');
         warning.style.display = 'none';
     }
 
-    checkAnswer()
+    checkAnswer();
 
     if (currentQuestion === totalQuestions - 1) {
         nextButton.textContent = 'Finish';

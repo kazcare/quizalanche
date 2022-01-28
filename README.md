@@ -4,7 +4,7 @@
 # **Quiz-a-lanche**
 ## Overview
 
-This is a *science quiz* game, which is very **easy to use**. I does not have too many buttons which makes it easy to use nor even an novice.
+This is a *science quiz* game, which is very **easy to use**. I does not have too many buttons which makes it easy to use for even an novice.
 
 It currently has 15 questions to answer . Questions are related to different fields of science. 
 
@@ -69,7 +69,7 @@ Following is the actual look after deployment.
 ## Design Choices
 <a></a>
 ### Fonts
-(To be added)
+
 I have used Google fonts to find the desired font styles for this project and have decided to use font **'Italianno' and 'Raleway'**. These are the kind of fonts I wanted to add to this particular project.
 
 * I used Italianno font style for the heading. Italianno give it a funky touch. 
@@ -84,6 +84,7 @@ I have used one icon for the window title, which I googled and downloaded and th
 <a></a>
 ### Colors
 
+It has a linear gradient effect to it's background, which shifts between green and gray from top to bottom. 
 I picked **white** *rgba(255, 255, 255, 0.7)* for the main quiz container.
 I used a colour similar to **dark gray** *rgba(13, 13, 26, 0.6)* for the heading and question container and container has a white shadow aroud the container. 
 Option containers and the Next Question button has **white** rgba(255, 255, 255, 1.0) background color and **black** text color.
@@ -100,7 +101,7 @@ Option containers and the Next Question button has **white** rgba(255, 255, 255,
 
  * It has linear gradient feature used for the body's background colour. It amalgamate **green and gray** colours.
  
- * Color palette I used is green and blue with mild opacity to make it look more apealing.
+ * Color palette I used is green and gray with mild opacity to make it look more apealing.
 
  * Quiz container is always stays in the middle of the screen for all the screen sizes.
 
@@ -110,18 +111,18 @@ Option containers and the Next Question button has **white** rgba(255, 255, 255,
 
  * While Option Containers and Next Question Button have lighter background color with dark text color. These Option Containers and Next Question Button have Hover feature added to them, so they temporarily change their background color to the same color as Question Container when the mouse pointer hovers over them.
 
- * All responsiveness on the Quiz Container is controlled by Next Question Button.
+ * All functions on the Quiz Container is controlled by Next Question Button.
 
- * Quiz game loads with the first question on the screeen and it let user know about their progress through the quiz.
+ * Quiz game loads with the first question on the screeen and it lets user know about their progress throughout the quiz.
 
- * If the Next Question Button clicked without making any selection, it pops an alert saying "Please, select an option!"
+ * If the Next Question Button clicked without making a selection, a message appears at the bottom of the quiz container "Please, select your answer"
 
  * When an option is selected and Next Qestion Button is pressed, the selcted option is checked against the correct answer provided in "question.js" and Quiz container disappears and a message box appears with either green or red background colour, showing whether user has picked the correct answer or not. Plus it has a Continue button at the bottom right corner to continue to the rest of the quiz.
 
  <img src="docs/correct.png">
  <img src="docs/incorrect.png">
 
- * And next question loads and selected option radio button unchecks again and user can make selction for the next question.
+ * When continue button is clicked the next question loads and selected option radio button unchecks again and user can make selction for the next question.
 
  * This process repeats until the last avaiable question displays. As soon as the last question pops on screen the Next Question Button changes it's text to **Finish**.
 
@@ -145,14 +146,11 @@ Option containers and the Next Question button has **white** rgba(255, 255, 255,
 
 I used only HTML5, CSS3 and JavaScript languages throughout the project.
 I used media query to make the website responsive to different screen sizes.
-I added an icon which displays on the browser window beside the title, it look like this
-
-<img src="docs/icon.png">
 
 <a></a>
 ### Tools
 
-I used Gitpod IDE to code my website. 
+I used Gitpod IDE to code my project. 
 
 * Following procedures are to be followed to get to the Gitpod IDE.
 
@@ -261,26 +259,35 @@ I used Gitpod IDE to code my website.
 
 * Originally the Quiz container was changing the backgoud colour to either green or red to show the user if the selected answer was correct ot not. But it was not changing it back to original state before the next question appears on the screen. 
 
-* To solve it I created an new container to show the message showing whether the selected answer is correct or not with a Continue button to go back to Quiz. Plus this container shows up either with green or red background color, depending on the selected answer. This container replaces the Quiz Container after user clicks Next Question Button.
+* To solve it by creating a container to show the message whether the selected answer is correct or not with a Continue button to go back to Quiz. Plus this container shows up either with green or red background color, depending on the selected answer. This container replaces the Quiz Container after user clicks Next Question Button, it means the actual quiz stays as it is.
 
 [Back to Top](#table-of-contents)
 
 <a></a>
 ## Deployment
 
-I deployed my website through <a href="https://github.com/" target="_blank" rel="noopener">GitHub.com</a>.
+project was deployed through <a href="https://github.com/" target="_blank" rel="noopener">GitHub.com</a>.
 
-1. I started by logging in to my own account and clicked on "your repositories" link in the "my account" menu. 
+1. It was done by logging in to GutHub account and clicked on "your repositories" link in the "my account" menu. 
 
-2. I clicked my project repository, it opened another page with all my files I created for the project. 
+2. Specific project repository to be clicked. it would opened another page with all files created for that project. 
 
 3. On top of the screen just above the list of file there was a menu. 
 
-4. Next, I clicked the setting option on the right hand of the menu, which brought me to the setting page. 
+4. Next, setting option to be clicked on the right hand of the menu, which opened up the setting page. 
 
-5. I scrolled down untill I found GitHub Pages option. 
+5. GitHub Pages option to be found by scrolling down to almost to the bottom of the page. 
 
-6. Then I clicked "check it out here" link under it to open Github Pages full menu page and it said that my site was published at the web address.
+6. It said "Pages settings now has its own dedicated tab! Check it out here!"
+ 
+7. "Check it out here" was a link, when it was clicked , it opened "GitHub pages".
+
+8. Second heading said source and under source there was drop-down menu and it had "None". 
+
+9. The drop down menu needed to opened to pick "main" and save button to be clicked. 
+
+10. that was all and it was deployed.
+
 
 [Back to Top](#table-of-contents)
 
