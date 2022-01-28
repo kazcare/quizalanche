@@ -6,7 +6,7 @@
 
 This is a *science quiz* game, which is very **easy to use**. I does not have too many buttons which makes it easy to use for even an novice.
 
-It currently has 15 questions to answer . Questions are related to different fields of science. 
+It currently has 15 questions to answer . Questions are related to different fields of science. Every question loads with a sequence number over the total mumber of questions, so the user will monitor the progress. Every question has 4 possible answers to choose from. It gives warning to user if the selection is not made and gives a feedback after every answer. It lets user know their achieved score out of the maximum achivable score at the end of the quiz.
 
 The oroginal look was planned according to the following wireframes.
 
@@ -238,15 +238,21 @@ I used Gitpod IDE to code my project.
 [Back to Top](#table-of-contents)
 
 <a></a>
-### Validator Testing
+## Validator Testing
 
-* No errors were detected by W3C validator for all html files.
+### HTML
+* No errors were detected by official W3C validator for html file.
 
-* No issues were indicated by W3C CSS (Jigsaw) validator for css file.
+### CSS
+* No issues were indicated by official W3C CSS (Jigsaw) validator for css file.
 
-* No error was found by Jshint.
-
-* I confirmed that colours and fonts are readable.
+### JavaScript
+* No errors were found when passing through Jshint validator.
+    - The following mertics were returned:
+    - There are 5 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 0.
+    - Largest function has 16 statements in it, while the median is 11.
+    - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 * I used the lighthouse option in the Google Chrome Dev Tools to verify the website integrity. Following is the screenshot of the report. 
     
