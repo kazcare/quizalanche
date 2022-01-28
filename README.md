@@ -56,9 +56,9 @@ Following is the actual look after deployment.
 <a></a>
 ## User Stories
 
-* I want to play a game which is visually appealing.
-* I would like to play easy to access quiz game.
-* It should not have too many unnecessary buttons.
+* As returning user I prefer that the quiz should not have too many unnecessary buttons.
+* I would like to see my progress throughout the quiz.
+* It should warn user if the answer is not selected.
 * It should be giving user feedback about their knowledge.
 * I would like to see some interesting, informative and challenging questions in the quiz game.
 * It should look professionally designed.
@@ -84,9 +84,9 @@ I have used one icon for the window title, which I googled and downloaded and th
 <a></a>
 ### Colors
 
-I picked **light blue** rgba(255, 255, 255, 0.7) for the main quiz container.
+I picked **white** *rgba(255, 255, 255, 0.7)* for the main quiz container.
 I used a colour similar to **dark gray** *rgba(13, 13, 26, 0.6)* for the heading and question container and container has a white shadow aroud the container. 
-Option containers and the Next Question button has **light gray** rgba(255, 255, 255, 0.5) background color and **black** text color.
+Option containers and the Next Question button has **white** rgba(255, 255, 255, 1.0) background color and **black** text color.
 
 [Back to Top](#table-of-contents)
 <a></a>
@@ -98,7 +98,7 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 
  * It has a funky looking heading with 'Italianno' font.
 
- * There is background image, which complements the quiz app.
+ * It has linear gradient feature used for the body's background colour. It amalgamate **green and gray** colours.
  
  * Color palette I used is green and blue with mild opacity to make it look more apealing.
 
@@ -112,7 +112,7 @@ Option containers and the Next Question button has **light gray** rgba(255, 255,
 
  * All responsiveness on the Quiz Container is controlled by Next Question Button.
 
- * Quiz game loads with the first question on the screeen.
+ * Quiz game loads with the first question on the screeen and it let user know about their progress through the quiz.
 
  * If the Next Question Button clicked without making any selection, it pops an alert saying "Please, select an option!"
 

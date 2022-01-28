@@ -1,13 +1,7 @@
 let currentQuestion = 0;
 let score = 0;
 
-// Create variables to all mutable areas on html
 let container = document.getElementById('quiz-container');
-let questionEL = document.getElementById('question');
-let opt1 = document.getElementById('opt-1');
-let opt2 = document.getElementById('opt-2');
-let opt3 = document.getElementById('opt-3');
-let opt4 = document.getElementById('opt-4');
 let nextButton = document.getElementById('next-button');
 let contButton = document.getElementById('cont-button');
 let resultCont = document.getElementById('result');
@@ -16,15 +10,18 @@ let checkCont = document.getElementById('check');
 //Total number of question available in question.js
 let totalQuestions = QUESTIONS.length;
 
-//Add an Event Listner on the Next Button, which calls loadNextQuestion function as it is clicked
-nextButton.addEventListener('click', loadNextQuestion);
-
-//Add an Event Listener on the continue button in Check container, which calls contQuiz function as it is clicked
-contButton.addEventListener('click', continueQuiz);
-
-//Call loadQuestion function
-loadQuestion(currentQuestion);
-
+/**
+To initialize the game need Call loadQuestion function
+Event Listner on the Next Button, which calls loadNextQuestion function as it is clicked
+and Event Listener on the continue button in Check container, 
+which calls contQuiz function as it is clicked
+*/
+window.addEventListener('DOMContentLoaded', initializeGame);
+function initializeGame() {
+    loadQuestion(currentQuestion);
+    nextButton.addEventListener('click', loadNextQuestion);
+    contButton.addEventListener('click', continueQuiz);
+}
 
 /**
 Get qestions index from question.js and assign to a variable q
@@ -34,12 +31,18 @@ Populate 4 option fields with the text content of 4 options from question.js
  */
 function loadQuestion(questionIndex) {
     let q = QUESTIONS[questionIndex];
+    let questionEL = document.getElementById('question');
+    let optA = document.getElementById('opt-1');
+    let optB = document.getElementById('opt-2');
+    let optC = document.getElementById('opt-3');
+    let optD = document.getElementById('opt-4');
     questionEL.textContent = (questionIndex + 1)+'/'+ totalQuestions + '. '+q.question;
-    opt1.textContent = q.option1;
-    opt2.textContent = q.option2;
-    opt3.textContent = q.option3;
-    opt4.textContent = q.option4;
+    optA.textContent = q.option1;
+    optB.textContent = q.option2;
+    optC.textContent = q.option3;
+    optD.textContent = q.option4;
 }
+
 /**Function for Next Question nextButton, which runs when the Next Button is clicked
     If Next Question Button is clicked without selecting an option
     It pops a warning to user asking for a selection before clicking the Next Question Button
@@ -67,12 +70,11 @@ function loadNextQuestion() {
         container.style.display = 'none';
         checkCont.style.display = 'none';
         resultCont.style.display = '';
-        resultCont.textContent = 'You Score: '+score+' / '+totalQuestions;
+        resultCont.textContent = 'Your Score: '+score+' / '+totalQuestions;
         return;
     }
 
-loadQuestion(currentQuestion);
-
+    loadQuestion(currentQuestion);
 }
 
 /**
