@@ -208,6 +208,8 @@ I used Gitpod IDE to code my website.
 
     - Samsung Galaxy Tab S4
 
+[Back to Top](#table-of-contents)
+
 ### **Testing Features**
 
 * Following features were tested for all of the above screen sizes
@@ -226,10 +228,15 @@ I used Gitpod IDE to code my website.
 
     - As user clicks the Finish button the Quiz container disappears again and shows up the Result container with the achieved score.
 
+**Google Chrome**
 <img src="docs/testing-chrome.png">
+  
+**Microsoft Edge**
 <img src="docs/testing-edge.png">
+ 
+**Mozilla Firefox**
 <img src="docs/testing-firefox.png">
-
+    
 [Back to Top](#table-of-contents)
 
 <a></a>
@@ -280,7 +287,7 @@ I deployed my website through <a href="https://github.com/" target="_blank" rel=
 <a></a>  
 ## Credits
 
-I would like to inform you all that this project (Quizalanche) is built for **educational purpose** only and I have rendered the following items and information from different resources. I would like to thank all of these resources for helping me completing my project.
+I would like to inform you all that this project (Quizalanche) is built for **educational purpose** only. I have rendered the following items and information from different resources. I would like to thank all of these resources for helping me completing my project.
 
 <a></a>
 ### Content
@@ -289,8 +296,6 @@ All questions were takem from **"radiotimes.com"**
 
 <a></a>
 ### Media
-
-* Image used as background is downloaded from **"istockphoto.com"**
 
 * Icon image I used for the browser window, was downloaded from google and converted into icon file using "favicon.com".
 
